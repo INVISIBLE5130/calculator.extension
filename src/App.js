@@ -1,24 +1,52 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
 
 function App() {
+  const [data, setData] = useState("");
+  const calcBtns = [];
+  [7, 8, 9, 4, 5, 6, 1, 2, 3, 0, "."].forEach(item => {
+    calcBtns.push(
+        <button onClick={event => {
+          setData(data + event.target.value)
+        }}
+        value={item}
+        key={item}
+        >{item}</button>
+    )
+  })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+      <div className="show-input">
+        {data}
+      </div>
+      <div className="buttons">
+          <div>
+              <button className="color-lightgrey" onClick={() => setData(data.substr(0,data.length - 1))}>
+                  C
+              </button>
+
+              <button className="color-lightgrey" onClick={() => setData("")}>
+                  AC
+              </button>
+          </div>
+
+          {calcBtns}
+
+          <div className="actions">
+              <button className="color-lightOrange" onClick={event => setData(data + event.target.value)} value="+">
+                  +
+              </button>
+              <button className="color-lightOrange" onClick={event => setData(data + event.target.value)} value="-">
+                  -
+              </button>
+              <button className="color-lightOrange" onClick={event => setData(data + event.target.value)} value="*">
+                  *
+              </button>
+              <button className="color-lightOrange" onClick={event => setData(data + event.target.value)} value="/">
+                  /
+              </button>
+          </div>
+      </div>
     </div>
   );
 }

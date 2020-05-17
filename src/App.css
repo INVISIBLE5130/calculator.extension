@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
-}
+@import url(//db.onlinewebfonts.com/c/3dd6e9888191722420f62dd54664bc94?family=Myriad+Pro);
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 250px;
+  height: 400px;
+  background: #858585;
+  font-family: "Myriad Pro", sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.wrapper .show-input {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  width: 90%;
+  height: 35vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wrapper .buttons {
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 55vh;
+  height: 85vh;
+  padding: 4vh;
+  background: #f3ece7;
+  border-radius: 15px 15px 0 0;
+}
+
+.wrapper .buttons button{
+  width: 12vh;
+  margin: 1vh;
+  height: 12vh;
+  border: none;
+  color: #f3ece7;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 10px;
+  background: #5b5b5b;
+  -webkit-box-shadow: 0 3px 3px 0 rgba(0,0,0,0.25);
+  -moz-box-shadow: 0 3px 3px 0 rgba(0,0,0,0.25);
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.25);
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.wrapper .buttons .color-lightgrey {
+  background: #c9ccd3;
+}
+
+.wrapper .buttons button:nth-child(11) {
+  width: 26vh;
+}
+
+.wrapper .buttons .actions {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 40vh;
+  right: 3vh;
+}
+
+.wrapper .buttons .actions .color-lightOrange {
+  background: #faba75;
 }

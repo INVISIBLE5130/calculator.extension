@@ -5,34 +5,61 @@
   flex-direction: column;
   align-items: center;
   width: 250px;
-  height: 400px;
+  height: 500px;
   background: #858585;
   font-family: "Myriad Pro", sans-serif;
 }
 
-.wrapper .show-input {
+.wrapper .show-input-previous {
   display: flex;
   flex-direction: column;
-  padding: 15px;
-  width: 90%;
+  padding: 4vh;
+  width: 40vh;
   height: 35vh;
+  word-break: break-all;
+  font-size: 20px;
+  color: #f3ece7;
+  text-align: right;
+}
+
+.wrapper .show-input-now {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  width: 40vh;
+  word-break: break-all;
+  font-size: 20px;
+  color: #5b5b5b;
+  text-align: right;
 }
 
 .wrapper .buttons {
   justify-content: flex-start;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 55vh;
-  height: 85vh;
+  width: 43vh;
+  height: 70vh;
   padding: 4vh;
   background: #f3ece7;
   border-radius: 15px 15px 0 0;
 }
 
+.wrapper .buttons .arrow {
+  padding: 0 45%;
+  width: 3vh;
+}
+
+.wrapper .buttons hr {
+  height: 3px;
+  border-radius: 5px;
+  background: #5b5b5b;
+  border: none;
+}
+
 .wrapper .buttons button{
-  width: 12vh;
+  width: 9vh;
   margin: 1vh;
-  height: 12vh;
+  height: 9vh;
   border: none;
   color: #f3ece7;
   outline: none;
@@ -53,16 +80,16 @@
   background: #c9ccd3;
 }
 
-.wrapper .buttons button:nth-child(11) {
-  width: 26vh;
+.wrapper .buttons button:nth-child(14) {
+  width: 20vh;
 }
 
 .wrapper .buttons .actions {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 40vh;
-  right: 3vh;
+  top: 41vh;
+  right: 2.5vh;
 }
 
 .wrapper .buttons .actions .color-lightOrange {

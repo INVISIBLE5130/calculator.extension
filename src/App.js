@@ -16,10 +16,18 @@ function App() {
   })
   return (
     <div className="wrapper">
-      <div className="show-input">
+      <div className="show-input-previous">
         {data}
       </div>
       <div className="buttons">
+          <img className="arrow" src={require("./img/down-arrow.svg")} alt="Arrow"/>
+
+          <div className="show-input-now">
+              {data}
+          </div>
+
+          <hr/>
+
           <div>
               <button className="color-lightgrey" onClick={() => setData(data.substr(0,data.length - 1))}>
                   C
@@ -27,6 +35,10 @@ function App() {
 
               <button className="color-lightgrey" onClick={() => setData("")}>
                   AC
+              </button>
+
+              <button className="color-lightgrey">
+                  %
               </button>
           </div>
 
@@ -40,10 +52,34 @@ function App() {
                   -
               </button>
               <button className="color-lightOrange" onClick={event => setData(data + event.target.value)} value="*">
-                  *
+                  x
               </button>
               <button className="color-lightOrange" onClick={event => setData(data + event.target.value)} value="/">
                   /
+              </button>
+
+              <button className="color-lightOrange"
+                      onClick={event => {
+                          try {
+                              setData(
+                                  // eslint-disable-next-line no-eval
+                                  String(eval(data)).length > 3 &&
+                                  // eslint-disable-next-line no-eval
+                                            String(eval(data)).includes(".")
+                                      // eslint-disable-next-line no-eval
+                                                ? String(eval(data).toFixed(4))
+                                      // eslint-disable-next-line no-eval
+                                                    : String(eval(data))
+                              )
+                          }
+
+                          catch (error) {
+                              console.log("Error: " + error)
+                          }
+                      }}
+                      value="="
+              >
+                  =
               </button>
           </div>
       </div>

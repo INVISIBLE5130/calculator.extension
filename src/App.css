@@ -42,6 +42,7 @@
   padding: 4vh;
   background: #f3ece7;
   border-radius: 15px 15px 0 0;
+  box-shadow: 0 -3px 10px 0 rgba(0,0,0,.25);
 }
 
 .wrapper .buttons .arrow {
@@ -54,6 +55,7 @@
   border-radius: 5px;
   background: #5b5b5b;
   border: none;
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,.25);
 }
 
 .wrapper .buttons button{
